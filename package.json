@@ -8,8 +8,10 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w @vagafit/api\" \"npm run dev -w @vagafit/web\"",
-    "build": "npm run build -w @vagafit/api && npm run build -w @vagafit/web",
-    "start": "npm run start -w @vagafit/api"
+    "build": "npm run build -w @vagafit/web",
+    "db:up": "docker compose up -d",
+    "db:init": "npm run db:init -w @vagafit/api",
+    "test": "npm run test -w @vagafit/api"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

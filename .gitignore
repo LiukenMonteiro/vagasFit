@@ -9,6 +9,4 @@ __pycache__
 .fbclient
 apps/api/data/profile.json
 apps/api/data/uploads/*
-apps/api/data/resumes/*
 !apps/api/data/uploads/.gitkeep
-!apps/api/data/resumes/.gitkeep
