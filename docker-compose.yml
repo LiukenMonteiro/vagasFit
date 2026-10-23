@@ -1,0 +1,20 @@
+# Servidor Firebird 5 para desenvolvimento.
+# O banco vagafit.fdb é criado automaticamente na primeira subida.
+services:
+  firebird:
+    image: firebirdsql/firebird:5
+    container_name: vagafit_firebird
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3050:3050"
+    environment:
+      FIREBIRD_ROOT_PASSWORD: ${FIREBIRD_ROOT_PASSWORD:-masterkey}
+      FIREBIRD_USER: ${FIREBIRD_USER:-vagafit}
+      FIREBIRD_PASSWORD: ${FIREBIRD_PASSWORD:-vagafit}
+      FIREBIRD_DATABASE: vagafit.fdb
+      FIREBIRD_DATABASE_DEFAULT_CHARSET: UTF8
+    volumes:
+      - firebird-data:/var/lib/firebird/data
+
+volumes:
+  firebird-data:
