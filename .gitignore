@@ -1,0 +1,14 @@
+node_modules
+.env
+dist
+.DS_Store
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.fbclient
+apps/api/data/profile.json
+apps/api/data/uploads/*
+apps/api/data/resumes/*
+!apps/api/data/uploads/.gitkeep
+!apps/api/data/resumes/.gitkeep
